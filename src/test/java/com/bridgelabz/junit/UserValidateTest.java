@@ -14,4 +14,9 @@ public class UserValidateTest {
 	public void lastNameTestValidator() {
 		assertEquals(true, UserValidate.lastNameValidator());
 	}
+	
+	@Test
+	public void emailTestValidator() {
+		assertEquals(true, UserValidate.emailValidator());
+	}
 }
