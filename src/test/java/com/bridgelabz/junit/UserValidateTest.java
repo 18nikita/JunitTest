@@ -9,4 +9,9 @@ public class UserValidateTest {
 	public void firstNameTestValidator() {
 		assertEquals(true, UserValidate.firstNameValidator());
 	}
+	
+	@Test
+	public void lastNameTestValidator() {
+		assertEquals(true, UserValidate.lastNameValidator());
+	}
 }
