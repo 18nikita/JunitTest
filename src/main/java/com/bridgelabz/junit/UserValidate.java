@@ -6,8 +6,11 @@ import java.util.regex.Pattern;
 public class UserValidate {
 
 	private final String NAME_VALIDATOR = "^[A-Z]{1}[a-z]{2,}$";
+	private final String LAST_NAME_VALIDATOR = "^[A-Z]{1}[a-z]{2,}$";
 	private final String EMAIL_VALIDATOR = "^([a][b][c])([\\.][a-z]+)[@][b][l][\\.][c][o]([\\.][i][n])";
 	private final String MOBILE_NUM_VALIDATOR = "(0/91)?[7-9][0-9]{9}";
+	private final String PASSWORD_RULE1_VALIDATOR = "[a-z]{8,}";
+	
 	static Scanner sc = new Scanner(System.in);
 
 	public static boolean firstNameValidator() {
@@ -37,6 +40,13 @@ public class UserValidate {
 		System.out.println("Enter the Mobile number: ");
 		String mobNum = uservalidate.sc.nextLine();
 		return Pattern.matches(uservalidate.MOBILE_NUM_VALIDATOR, mobNum);
+	}
+	
+	public static boolean password1Validator() {
+		UserValidate uservalidate = new UserValidate();
+		System.out.println("Enter the Password: ");
+		String password1 = uservalidate.sc.nextLine();
+		return Pattern.matches(uservalidate.PASSWORD_RULE1_VALIDATOR, password1);
 	}
 
 
