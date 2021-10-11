@@ -9,14 +9,19 @@ public class UserValidateTest {
 	public void firstNameTestValidator() {
 		assertEquals(true, UserValidate.firstNameValidator());
 	}
-	
+
 	@Test
 	public void lastNameTestValidator() {
 		assertEquals(true, UserValidate.lastNameValidator());
 	}
-	
+
 	@Test
 	public void emailTestValidator() {
 		assertEquals(true, UserValidate.emailValidator());
+	}
+
+	@Test
+	public void mobNumTestValidator() {
+		assertEquals(true, UserValidate.mobNumValidator());
 	}
 }
