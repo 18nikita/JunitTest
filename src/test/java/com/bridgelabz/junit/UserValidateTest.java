@@ -21,7 +21,12 @@ public class UserValidateTest {
 	}
 
 	@Test
-	public void mobNumTestValidator() {
+	public void password1Validator() {
 		assertEquals(true, UserValidate.password1Validator());
+	}
+	
+	@Test
+	public void password2Validator() {
+		assertEquals(true, UserValidate.password2Validator());
 	}
 }
