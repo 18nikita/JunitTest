@@ -34,4 +34,9 @@ public class UserValidateTest {
 	public void password3Validator() {
 		assertEquals(true, UserValidate.password3Validator());
 	}
+	
+	@Test
+	public void password4Validator() {
+		assertEquals(true, UserValidate.password4Validator());
+	}
 }

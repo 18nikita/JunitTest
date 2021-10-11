@@ -12,6 +12,7 @@ public class UserValidate {
 	private final String PASSWORD_RULE1_VALIDATOR = "[a-z]{8,}";
 	private final String PASSWORD_RULE2_VALIDATOR = "[A-Z]{1,}[a-z]{8,}";
 	private final String PASSWORD_RULE3_VALIDATOR = "[a-z A-z 0-9]{8,}";
+	private final String PASSWORD_RULE4_VALIDATOR = "^(?=.*[A-Z a-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Z a-z\\d@$!%*#?&]{8,}$";
 
 	static Scanner sc = new Scanner(System.in);
 
@@ -62,6 +63,13 @@ public class UserValidate {
 		System.out.println("Enter the Password 3: ");
 		String password3 = uservalidate.sc.nextLine();
 		return Pattern.matches(uservalidate.PASSWORD_RULE3_VALIDATOR, password3);
+	}
+	
+	public static boolean password4Validator() {
+		UserValidate uservalidate = new UserValidate();
+		System.out.println("Enter the Password 4: ");
+		String password4 = uservalidate.sc.nextLine();
+		return Pattern.matches(uservalidate.PASSWORD_RULE4_VALIDATOR, password4);
 	}
 
 }
