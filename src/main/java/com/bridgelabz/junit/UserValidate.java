@@ -30,7 +30,7 @@ public class UserValidate {
 		return Pattern.matches(uservalidate.LAST_NAME_VALIDATOR, lName);
 	}
 
-	public static boolean emailValidator() {
+	public static boolean emailValidator(String email2Test) {
 		UserValidate uservalidate = new UserValidate();
 		System.out.println("Enter the Email address: ");
 		String email = UserValidate.sc.nextLine();
